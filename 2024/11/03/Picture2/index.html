@@ -1,773 +1,253 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <!-- title -->
-<!-- keywords -->
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="author" content="ChuiShuiMingYue">
-    <meta name="renderer" content="webkit">
-    <meta name="copyright" content="ChuiShuiMingYue">
-        <meta name="keywords" content="hexo,hexo-theme,hexo-blog,吹水明月,ChuiShui233,ShuiYue's blog,ShuiYue's Studio">
-    <meta name="description" content="">
-    <meta name="description" content="是真白🤤🤤🤤 预览 图片名字就是p站id，不要爬我的博客啊喂!">
-<meta property="og:type" content="article">
-<meta property="og:title" content="P站画作推荐第2期!">
-<meta property="og:url" content="https://cc12.eu.org/2024/11/03/Picture2/index.html">
-<meta property="og:site_name" content="ShuiYue Blog">
-<meta property="og:description" content="是真白🤤🤤🤤 预览 图片名字就是p站id，不要爬我的博客啊喂!">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cc12.eu.org/images/32476644.jpg">
-<meta property="og:image" content="https://cc12.eu.org/images/33882252.jpg">
-<meta property="og:image" content="https://cc12.eu.org/images/34200017.jpg">
-<meta property="og:image" content="https://cc12.eu.org/images/39268994.jpg">
-<meta property="og:image" content="https://cc12.eu.org/images/45954911.png">
-<meta property="og:image" content="https://cc12.eu.org/images/54289607.jpg">
-<meta property="og:image" content="https://cc12.eu.org/images/67371635.jpg">
-<meta property="article:published_time" content="2024-11-03T13:11:43.000Z">
-<meta property="article:modified_time" content="2024-11-03T13:32:53.672Z">
-<meta property="article:author" content="ChuiShuiMingYue">
-<meta property="article:tag" content="Pixiv">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cc12.eu.org/images/32476644.jpg">
-    <meta http-equiv="Cache-control" content="no-cache">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="icon" href="/assets/favicon.ico">
-    <title>P站画作推荐第2期! · 吹水明月的小窝</title>
-    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
-/* This file is meant as a standalone workflow for
-- testing support for link[rel=preload]
-- enabling async CSS loading in browsers that do not support rel=preload
-- applying rel preload css once loaded, whether supported or not.
-*/ -->
-<script>
-    (function (w) {
-        'use strict'
-        // rel=preload support test
-        if (!w.loadCSS) {
-            w.loadCSS = function () {}
-        }
-        // define on the loadCSS obj
-        var rp = (loadCSS.relpreload = {})
-        // rel=preload feature support test
-        // runs once and returns a function for compat purposes
-        rp.support = (function () {
-            var ret
-            try {
-                ret = w.document.createElement('link').relList.supports('preload')
-            } catch (e) {
-                ret = false
-            }
-            return function () {
-                return ret
-            }
-        })()
+    <meta charset="utf-8" />
+    <title>P站画作推荐第2期! | ShuiYue Blog</title>
+    <meta name="author" content="ChuiShuiMingYue" />
+    <meta name="description" content="爱来自吹水明月" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
 
-        // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
-        // then change that media back to its intended value on load
-        rp.bindMediaToggle = function (link) {
-            // remember existing media attr for ultimate state, or default to 'all'
-            var finalMedia = link.media || 'all'
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
 
-            function enableStylesheet() {
-                link.media = finalMedia
-            }
 
-            // bind load handlers to enable media
-            if (link.addEventListener) {
-                link.addEventListener('load', enableStylesheet)
-            } else if (link.attachEvent) {
-                link.attachEvent('onload', enableStylesheet)
-            }
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
 
-            // Set rel and non-applicable media type to start an async request
-            // note: timeout allows this to happen async to let rendering continue in IE
-            setTimeout(function () {
-                link.rel = 'stylesheet'
-                link.media = 'only x'
-            })
-            // also enable media after 3 seconds,
-            // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
-            setTimeout(enableStylesheet, 3000)
-        }
 
-        // loop through link elements in DOM
-        rp.poly = function () {
-            // double check this to prevent external calls from running
-            if (rp.support()) {
-                return
-            }
-            var links = w.document.getElementsByTagName('link')
-            for (var i = 0; i < links.length; i++) {
-                var link = links[i]
-                // qualify links to those with rel=preload and as=style attrs
-                if (
-                    link.rel === 'preload' &&
-                    link.getAttribute('as') === 'style' &&
-                    !link.getAttribute('data-loadcss')
-                ) {
-                    // prevent rerunning on link
-                    link.setAttribute('data-loadcss', true)
-                    // bind listeners to toggle media back
-                    rp.bindMediaToggle(link)
-                }
-            }
-        }
 
-        // if unsupported, run the polyfill
-        if (!rp.support()) {
-            // run once at least
-            rp.poly()
+<script src="/js/lib/preview.js"></script>
 
-            // rerun poly on an interval until onload
-            var run = w.setInterval(rp.poly, 500)
-            if (w.addEventListener) {
-                w.addEventListener('load', function () {
-                    rp.poly()
-                    w.clearInterval(run)
-                })
-            } else if (w.attachEvent) {
-                w.attachEvent('onload', function () {
-                    rp.poly()
-                    w.clearInterval(run)
-                })
-            }
-        }
 
-        // commonjs
-        if (typeof exports !== 'undefined') {
-            exports.loadCSS = loadCSS
-        } else {
-            w.loadCSS = loadCSS
-        }
-    })(typeof global !== 'undefined' ? global : this)
-</script>
 
-    <style type="text/css">
-    @font-face {
-        font-family: 'Oswald-Regular';
-        src: url("/font/Oswald-Regular.ttf");
-    }
 
-    body {
-        margin: 0;
-    }
 
-    header,
-    footer,
-    .footer-fixed-btn,
-    .sidebar,
-    .container,
-    .site-intro-meta,
-    .toc-wrapper {
-        display: none;
-    }
 
-    .site-intro {
-        position: relative;
-        z-index: 3;
-        width: 100%;
-        /* height: 50vh; */
-        overflow: hidden;
-    }
 
-    .site-intro-placeholder {
-        position: absolute;
-        z-index: -2;
-        top: 0;
-        left: 0;
-        width: calc(100% + 300px);
-        height: 100%;
-        background: repeating-linear-gradient(
-            -45deg,
-            #444 0,
-            #444 80px,
-            #333 80px,
-            #333 160px
-        );
-        background-position: center center;
-        transform: translate3d(-226px, 0, 0);
-        animation: gradient-move 2.5s ease-out 0s infinite;
-    }
 
-    @keyframes gradient-move {
-        0% {
-            transform: translate3d(-226px, 0, 0);
-        }
-        100% {
-            transform: translate3d(0, 0, 0);
-        }
-    }
-</style>
 
-    <link id="stylesheet-fancybox" rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link id="stylesheet-base" rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link id="stylesheet-mobile" rel="preload" href="/css/mobile.css" as="style" onload="this.onload=null;this.rel='stylesheet';this.media='screen and (max-width: 960px)'">
-    <link id="stylesheet-theme-dark" rel="preload" href="/css/dark.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js" as="script">
-    <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
-    <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
-    <!-- algolia -->
-    <!-- 百度统计  -->
-    <!-- 谷歌统计  -->
-        <script>
-            var cnzz_s_tag = document.createElement('script');
-            cnzz_s_tag.type = 'text/javascript';
-            cnzz_s_tag.async = true;
-            cnzz_s_tag.charset = 'utf-8';
-            cnzz_s_tag.src = 'https://w.cnzz.com/c.php?id=&async=1';
-            var root_s = document.getElementsByTagName('script')[0];
-            root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
-        </script>
-    <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1SYQDR26DZ"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-1SYQDR26DZ');
-        </script>
-
-        <!-- 引入 APlayer 和 MetingJS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-<!-- 使用 MetingJS 集成网易云音乐播放列表 -->
-<meting-js
-    server="netease"
-    type="playlist"
-    id="7773888824"
-    fixed="true"
-    autoplay="false"
-</meting-js>
+<link rel="stylesheet" href="/css/main.css" />
 
 <meta name="generator" content="Hexo 7.3.0"></head>
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <script type="text/javascript">
-        if (typeof window.$ == undefined) {
-            console.warn('jquery load from jsdelivr failed, will load local script')
-            document.write('<script src="/lib/jquery.min.js" />')
-        }
-    </script>
-        <body class="post-body">
-        <!-- header -->
-        <header class="header header-mobile">
-    <!-- top read progress line -->
-    <div class="header-element">
-        <div class="read-progress read-progress-feature"></div>
-    </div>
-    <!-- sidebar menu button -->
-    <div class="header-element">
-        <div class="header-sidebar-menu">
-            <div style="padding-left: 1px;">&#xe775;</div>
-        </div>
-    </div>
-    <!-- header actions -->
-    <div class="header-actions">
-        <!-- theme mode switch button -->
-        <span class="header-theme-btn header-element">
-            <i class="fas fa-adjust"></i>
-        </span>
-        <!-- back to home page text -->
-        <span class="home-link header-element">
-            <a href="/">ShuiYue's Blog.</a>
-        </span>
-    </div>
-    <!-- toggle banner -->
-    <div class="banner">
-        <div class="blog-title header-element">
-            <a href="/">ShuiYue&#39;s Blog.</a>
-        </div>
-        <div class="post-title header-element">
-            <a href="#" class="post-name">P站画作推荐第2期!</a>
-        </div>
-    </div>
-</header>
-
-        <!-- fixed footer -->
-        <footer class="footer-fixed">
-    <!-- donate button -->
-
-    <!-- back to top button -->
-    <div class="footer-fixed-btn footer-fixed-btn--hidden back-top">
-        <div>&#xe639;</div>
-    </div>
-</footer>
-
-        <!-- wrapper -->
-        <div class="wrapper">
-            <div class="site-intro" style="    height:50vh;
-">
-    <!-- 主页  -->
-    <!-- 404页  -->
-    <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
-    <div class="site-intro-meta">
-        <!-- 标题  -->
-        <h1 class="intro-title">
-            <!-- 主页  -->
-                P站画作推荐第2期!
-            <!-- 404 -->
-        </h1>
-        <!-- 副标题 -->
-        <p class="intro-subtitle">
-            <!-- 主页副标题  -->
-            <!-- 404 -->
-        </p>
-        <!-- 文章页 meta -->
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                    <div class="post-intro-tags" >
-        <a class="post-tag" href="javascript:void(0);" data-tags="Pixiv">Pixiv</a>
-</div>
-
-                <!-- 文章字数统计 -->
-                    <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">22</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
-                    </div>
-                <div class="post-intro-meta">
-                    <!-- 撰写日期 -->
-                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
-                    <span class="post-intro-time">2024/11/03</span>
-                    <!-- busuanzi -->
-                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
-                            <span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    <!-- 文章分享 -->
-                    <span class="share-wrapper">
-                        <span class="iconfont-archer share-icon">&#xe71d;</span>
-                        <span class="share-text">Share</span>
-                        <ul class="share-list">
-                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
-                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
-                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
-                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
-                        </ul>
-                    </span>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
                 </div>
             </div>
-    </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>SHUIYUE BLOG</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;SHUIYUE BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
 </div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
 
-            <script>
-  // get user agent
-  function getBrowserVersions() {
-    var u = window.navigator.userAgent
-    return {
-      userAgent: u,
-      trident: u.indexOf('Trident') > -1, //IE内核
-      presto: u.indexOf('Presto') > -1, //opera内核
-      webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
-      gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
-      mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
-      ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-      android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
-      iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
-      iPad: u.indexOf('iPad') > -1, //是否为iPad
-      webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
-      weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
-      uc: u.indexOf('UCBrowser') > -1, //是否为android下的UC浏览器
-    }
-  }
-  var browser = {
-    versions: getBrowserVersions(),
-  }
-  console.log('userAgent: ' + browser.versions.userAgent)
-
-  // callback
-  function fontLoaded() {
-    console.log('font loaded')
-    if (document.getElementsByClassName('site-intro-meta')) {
-      document
-        .getElementsByClassName('intro-title')[0]
-        .classList.add('intro-fade-in')
-      document
-        .getElementsByClassName('intro-subtitle')[0]
-        .classList.add('intro-fade-in')
-      var postIntros = document.getElementsByClassName('post-intros')[0]
-      if (postIntros) {
-        postIntros.classList.add('post-fade-in')
-      }
-    }
-  }
-
-  // UC不支持跨域，所以直接显示
-  function asyncCb() {
-    if (browser.versions.uc) {
-      console.log('UCBrowser')
-      fontLoaded()
-    } else {
-      WebFont.load({
-        custom: {
-          families: ['Oswald-Regular'],
-        },
-        loading: function () {
-          // 所有字体开始加载
-          // console.log('font loading');
-        },
-        active: function () {
-          // 所有字体已渲染
-          fontLoaded()
-        },
-        inactive: function () {
-          // 字体预加载失败，无效字体或浏览器不支持加载
-          console.log('inactive: timeout')
-          fontLoaded()
-        },
-        timeout: 5000, // Set the timeout to two seconds
-      })
-    }
-  }
-
-  function asyncErr() {
-    console.warn('script load from CDN failed, will load local script')
-  }
-
-  // load webfont-loader async, and add callback function
-  function async(u, cb, err) {
-    var d = document,
-      t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0]
-    o.src = u
-    if (cb) {
-      o.addEventListener(
-        'load',
-        function (e) {
-          cb(null, e)
-        },
-        false
-      )
-    }
-    if (err) {
-      o.addEventListener(
-        'error',
-        function (e) {
-          err(null, e)
-        },
-        false
-      )
-    }
-    s.parentNode.insertBefore(o, s)
-  }
-
-  var asyncLoadWithFallBack = function (arr, success, reject) {
-    var currReject = function () {
-      reject()
-      arr.shift()
-      if (arr.length) async(arr[0], success, currReject)
-    }
-
-    async(arr[0], success, currReject)
-  }
-
-  asyncLoadWithFallBack(
-    [
-      'https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js',
-      'https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js',
-      "/lib/webfontloader.min.js",
-    ],
-    asyncCb,
-    asyncErr
-  )
-</script>
-
-            <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" alt="loading">
-            <div class="container container-unloaded">
-                <main class="main post-page">
-    <article class="article-entry">
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>P站画作推荐第2期!</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/3
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E7%94%BB%E4%BD%9C%E6%8E%A8%E8%8D%90/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                画作推荐
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/Pixiv/" style="color: #00a596">
+                    Pixiv
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
         <p>是真白🤤🤤🤤</p>
+<span id="more"></span>
+
 <h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><blockquote>
 <p>图片名字就是p站id，不要爬我的博客啊喂!</p>
 </blockquote>
 <p><img src="/images/32476644.jpg" alt="32476644"><br><img src="/images/33882252.jpg" alt="33882252"><br><img src="/images/34200017.jpg" alt="34200017"><br><img src="/images/39268994.jpg" alt="39268994"><br><img src="/images/45954911.png" alt="45954911"><br><img src="/images/54289607.jpg" alt="54289607"><br><img src="/images/67371635.jpg" alt="67371635"></p>
 
-    </article>
-    <!-- license -->
-        <div class="license-wrapper">
-            <p>原文作者：<a href="https://cc12.eu.org">ChuiShuiMingYue</a>
-            <p>原文链接：<a href="https://cc12.eu.org/2024/11/03/Picture2/">https://cc12.eu.org/2024/11/03/Picture2/</a>
-            <p>发表日期：<a href="https://cc12.eu.org/2024/11/03/Picture2/">November 3rd 2024, 9:11:43 pm</a>
-            <p>更新日期：<a href="https://cc12.eu.org/2024/11/03/Picture2/">November 3rd 2024, 9:32:53 pm</a>
-            <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
-        </div>
-    <!-- paginator -->
-    <ul class="post-paginator">
-        <li class="next">
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2024/11/04/Picture3/" title="P站画作推荐第3期! (≧◡≦)♡">
-                    <div class="nextTitle">P站画作推荐第3期! (≧◡≦)♡</div>
-                </a>
-        </li>
-        <li class="previous">
-                <div class="prevSlogan">Previous Post</div>
-                <a href="/2024/11/03/PictureCode/" title="使用Python爬取P站收藏">
-                    <div class="prevTitle">使用Python爬取P站收藏</div>
-                </a>
-        </li>
-    </ul>
-    <!-- comment -->
-        <div class="post-comment">
-            <!-- 来必力 City 版安装代码 -->
-
-            
-            
-            
-            <!-- utteranc评论 -->
-
-            <!-- partial('_partial/comment/changyan') -->
-            <!--PC版-->
-
-            
-                <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-    <div id="comment"></div>
-    <script>
-        new Valine({
-            el: '#comment',
-            notify:false,
-            verify:false,
-            appId: "8Qy6n68WVW7cvQ14xeheV7p9-gzGzoHsz",
-            appKey: "nnAu7zS8C7JQxX6jzWGcQ1IQ",
-            placeholder: "喵喵？",
-            path:window.location.pathname,
-            avatar:'mm'
-        });
-    </script>
-
-            
-        </div>
-    <!-- timeliness note -->
-    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
-    <!-- Mathjax -->
-</main>
-
-                <!-- profile -->
-            </div>
-            <footer class="footer footer-unloaded">
-    <!-- social  -->
-        <div class="social">
-                            <a href="mailto:3442681588@qq.com" class="iconfont-archer email" title="email" ></a>
-                <a href="//github.com/ChuiShui233" class="iconfont-archer github" target="_blank" title="github"></a>
-                <span class="iconfont-archer qq" title="qq">
-                    <img class="profile-qr" src="/assets/QQ_qr.jpg" />
-                </span>
-                <a href="https://space.bilibili.com/1012112596" class="iconfont-archer bilibili" target="_blank" title="bilibili"></a>
-
-        </div>
-    <!-- powered by Hexo  -->
-    <div class="copyright">
-        <span id="hexo-power">Powered by <a href="" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info"> ChuiShuiMingYue</span>
     </div>
-    <!-- website approve for Chinese user -->
-    <!-- 不蒜子  -->
-        <div class="busuanzi-container">
-                <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> QWQ</span>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2024 ShuiYue Blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;ChuiShuiMingYue
         </div>
-    <!-- 广告位  -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8467175359044157"
-     crossorigin="anonymous"></script>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
 </footer>
 
         </div>
-        <!-- toc -->
-            <div class="toc-wrapper toc-wrapper-loding" style=    top:50vh;
->
-                <div class="toc-catalog">
-                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-                </div>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E8%A7%88"><span class="toc-number">1.</span> <span class="toc-text">预览</span></a></li></ol>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
             </div>
-        <!-- sidebar -->
-        <div class="sidebar sidebar-hide">
-    <ul class="sidebar-tabs sidebar-tabs-active-0">
-        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
-        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
-        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
-    </ul>
-    <div class="sidebar-content sidebar-content-show-archive">
-        <div class="sidebar-panel-archives">
-    <!-- 在 ejs 中将 archive 按照时间排序 -->
+        </transition>
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    <div class="total-and-search">
-        <div class="total-archive">
-        Total : 10
-        </div>
-        <!-- search  -->
     </div>
-    <div class="post-archive">
-            <div class="archive-year"> 2024 </div>
-            <ul class="year-list">
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/14</span>
-            <a class="archive-post-title" href="/2024/12/14/Picture5/">P站画作推荐第5期! (๑>◡<๑)</a>
-        </li>
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/28</span>
-            <a class="archive-post-title" href="/2024/11/28/PT/">ProjectTreble 备忘录-间断更新</a>
-        </li>
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/28</span>
-            <a class="archive-post-title" href="/2024/11/28/AULAF75/">12月体验[狼蛛F75]</a>
-        </li>
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span>
-            <a class="archive-post-title" href="/2024/11/15/RealmeGT6/">11月体验 | Realme GT6</a>
-        </li>
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/04</span>
-            <a class="archive-post-title" href="/2024/11/04/Picture4/">P站画作推荐第4期! (≧◡≦)♡</a>
-        </li>
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/04</span>
-            <a class="archive-post-title" href="/2024/11/04/Picture3/">P站画作推荐第3期! (≧◡≦)♡</a>
-        </li>
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/03</span>
-            <a class="archive-post-title" href="/2024/11/03/Picture2/">P站画作推荐第2期!</a>
-        </li>
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/03</span>
-            <a class="archive-post-title" href="/2024/11/03/PictureCode/">使用Python爬取P站收藏</a>
-        </li>
-                </ul>
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/02</span>
-            <a class="archive-post-title" href="/2021/06/02/Picture1/">P站画作推荐第一集!(。・ω・。)</a>
-        </li>
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/12</span>
-            <a class="archive-post-title" href="/2021/04/12/hello-world/">Hello World</a>
-        </li>
-            </ul>
-    </div>
-</div>
+    <script src="/js/main.js"></script>
+    
+    
 
-        <div class="sidebar-panel-tags">
-    <div class="sidebar-tags-name">
-            <span class="sidebar-tag-name" data-tags="Pixiv">
-                <span class="iconfont-archer">&#xe606;</span>
-                Pixiv
-            </span>
-            <span class="sidebar-tag-name" data-tags="Python">
-                <span class="iconfont-archer">&#xe606;</span>
-                Python
-            </span>
-            <span class="sidebar-tag-name" data-tags="爬虫">
-                <span class="iconfont-archer">&#xe606;</span>
-                爬虫
-            </span>
-            <span class="sidebar-tag-name" data-tags="数码">
-                <span class="iconfont-archer">&#xe606;</span>
-                数码
-            </span>
-            <span class="sidebar-tag-name" data-tags="真我GT6">
-                <span class="iconfont-archer">&#xe606;</span>
-                真我GT6
-            </span>
-            <span class="sidebar-tag-name" data-tags="狼蛛">
-                <span class="iconfont-archer">&#xe606;</span>
-                狼蛛
-            </span>
-            <span class="sidebar-tag-name" data-tags="测评">
-                <span class="iconfont-archer">&#xe606;</span>
-                测评
-            </span>
-            <span class="sidebar-tag-name" data-tags="我爱你们">
-                <span class="iconfont-archer">&#xe606;</span>
-                我爱你们
-            </span>
-            <span class="sidebar-tag-name" data-tags="ProjectTreble">
-                <span class="iconfont-archer">&#xe606;</span>
-                ProjectTreble
-            </span>
-            <span class="sidebar-tag-name" data-tags="备忘录">
-                <span class="iconfont-archer">&#xe606;</span>
-                备忘录
-            </span>
-            <span class="sidebar-tag-name" data-tags="教程">
-                <span class="iconfont-archer">&#xe606;</span>
-                教程
-            </span>
-    </div>
-    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
-    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
-        缺失模块，请参考主题文档进行安装配置：https://github.com/fi3ework/hexo-theme-archer#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98
-    </div> 
-    <div class="sidebar-tags-list"></div>
-</div>
 
-        <div class="sidebar-panel-categories">
-    <div class="sidebar-categories-name">
-        <span class="sidebar-category-name" data-categories="画作推荐">
-            <span class="iconfont-archer">&#xe60a;</span>
-            画作推荐
-        </span>
-        <span class="sidebar-category-name" data-categories="代码示例">
-            <span class="iconfont-archer">&#xe60a;</span>
-            代码示例
-        </span>
-        <span class="sidebar-category-name" data-categories="测评">
-            <span class="iconfont-archer">&#xe60a;</span>
-            测评
-        </span>
-        <span class="sidebar-category-name" data-categories="教程">
-            <span class="iconfont-archer">&#xe60a;</span>
-            教程
-        </span>
-    </div>
-    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
-    <div class="sidebar-categories-list"></div>
-</div>
 
-    </div>
-</div>
 
-        <!-- site-meta -->
-        <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
-    var siteMeta = {
-        url: "https://cc12.eu.org",
-        root: siteMetaRoot,
-        author: "ChuiShuiMingYue"
-    }
-</script>
+    
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-        <!-- main func -->
-        <script src="/scripts/main.js"></script>
-        <!-- fancybox -->
-        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js" onload="window.Fancybox.bind('[data-fancybox]')" defer></script>
-        <!-- algolia -->
-        <!-- busuanzi -->
-            <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
-        <!-- async load share.js -->
-            <script src="/scripts/share.js" async></script>
-        <!-- mermaid -->
-        
-    </body>
+    <script src="/js/csmy.js"></script>
+</body>
 </html>
