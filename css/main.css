@@ -353,7 +353,7 @@
 }
 #loading-circle {
     align-items: center;
-    border: 10px solid #a3ddfb;
+    border: 10px solid #e5f2f8;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -367,7 +367,7 @@
     margin-right: calc(100% - 100vw);
 }
 #menu {
-    background: rgba(146, 202, 250, 0.5); /* 半透明背景色 */
+    background: rgba(221, 237, 252, 0.288); /* 半透明背景色 */
     backdrop-filter: blur(10px); /* 毛玻璃效果 */
     box-shadow: 0 -1px 10px 0 #9e9e9e4d;
     font-weight: bold;
