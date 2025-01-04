@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>portfolio | ShuiYue Blog</title>
+    <title>flutter ci/cd pipeline | ShuiYue Blog</title>
     <meta name="author" content="ChuiShuiMingYue" />
     <meta name="description" content="爱来自吹水明月" />
     <meta name="keywords" content="" />
@@ -184,23 +184,127 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>portfolio</h1>
+        <h1>flutter ci/cd pipeline</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2024/11/1
+            2025/1/4
         </span>
         
+        <span class="category">
+            <a href="/categories/%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                代码示例
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%88%91%E7%88%B1%E4%BD%A0%E4%BB%AC/" style="color: #00bcd4">
+                    我爱你们
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/futter/" style="color: #ff7d73">
+                    futter
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/ci-cd/" style="color: #03a9f4">
+                    ci/cd
+                </a>
+            </span>
+            
+        </span>
         
     </div>
     
     <div class="content" v-pre>
-        <blockquote>
-<p>CSMY 2024 项目组</p>
-</blockquote>
+        <h1 id="Flutter-CI-CD-Pipeline"><a href="#Flutter-CI-CD-Pipeline" class="headerlink" title="Flutter CI&#x2F;CD Pipeline"></a>Flutter CI&#x2F;CD Pipeline</h1><p>这是仅构建android apk的Flutter CI&#x2F;CD Github Action工作流</p>
+<span id="more"></span>
+
+<pre><code class="yaml"># .github/workflows/android_flutter_ci.yaml
+
+name: Flutter CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+    tags:
+      - &#39;v*&#39;  # Only tags with specific version formats (e.g., v1.0) will trigger this workflow
+  pull_request:
+    branches: [ main ]  # Only PRs targeting the main branch will trigger this workflow
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      flutter_version: &#39;3.27.1&#39;
+    steps:
+      - name: Determine Flutter version
+        run: echo &quot;flutter_version=3.27.1&quot; &gt;&gt; $GITHUB_ENV  # Set Flutter version for subsequent jobs
+
+  build_and_test:
+    needs: prepare
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        platform: [apk]
+        include:
+          - platform: apk
+            os: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2  # Check out repository code
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v1
+        with:
+          flutter-version: $&#123;&#123; env.flutter_version &#125;&#125;  # Use the determined Flutter version
+      - name: Install dependencies
+        run: flutter pub get  # Install Flutter project dependencies
+      - name: Build
+        run: |
+              flutter build apk --release  # Build Android APK
+      - name: Archive Artifacts
+        uses: actions/upload-artifact@v4  # Upload build artifacts
+        with:
+          name: $&#123;&#123; matrix.platform &#125;&#125;-release
+          path: |
+            build/app/outputs/flutter-apk/*.apk
+            build/ios/iphoneos/*.app
+  deploy:
+    needs: build_and_test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Download Artifacts
+        uses: actions/download-artifact@v4  # Download build artifacts
+        with:
+          name: apk-release
+      - name: Deploy
+        run: |
+          VERSION=$&#123;GITHUB_REF#refs/tags/&#125;
+          echo &quot;Deploying version $VERSION to production&quot;
+          # Add specific deployment commands here, such as uploading to app stores or servers
+</code></pre>
 
     </div>
     
